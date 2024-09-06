@@ -27,7 +27,7 @@ func _ready() -> void:
 # Public methods
 # ------------------------------------------------------------------------------
 
-func set_ticker(callable: Callable, period_msec: int, execute_immediately: bool = true, ticker_name: String = "") -> bool:
+func set_ticker(callable: Callable, period_msec: int, execute_immediately: bool = true, ticker_name: String = "") -> int:
 	mutex.lock()
 	
 	# increment id
