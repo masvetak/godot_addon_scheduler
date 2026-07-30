@@ -23,6 +23,10 @@ var _events_id: int = 0
 func _ready() -> void:
 	thread.start(_thread_loop)
 
+func _exit_tree() -> void:
+	if not thread.is_alive():
+		thread.wait_to_finish()
+
 # ------------------------------------------------------------------------------
 # Public methods
 # ------------------------------------------------------------------------------
